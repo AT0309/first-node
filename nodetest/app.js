@@ -1,7 +1,13 @@
 'use strict'
 const number=process.argv[2] || 1;
-let sum=1;
-for(let i=1; i<=number; i++){
-    sum*=i;
+var a=new Array();
+var sum=0;
+for(var i=0; i<number; i++){
+    if(i>=2){
+        sum=a[i-1]+a[i-2];
+        a.push(sum);
+    }else{
+        a.push(1);
+    }
 }
-console.log(sum);
+console.log(a[a.length-1]);
