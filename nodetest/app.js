@@ -1,13 +1,12 @@
 'use strict'
-const number=process.argv[2] || 1;
-var a=new Array();
-var sum=0;
-for(var i=0; i<number; i++){
-    if(i>=2){
-        sum=a[i-1]+a[i-2];
-        a.push(sum);
+function fib(a){
+    if(a<=2){
+        return 1;
     }else{
-        a.push(1);
+        return fib(a-1)+fib(a-2);
     }
 }
-console.log(a[a.length-1]);
+
+for(var i=1; i<=process.argv[2]; i++){
+    console.log(fib(i));
+}
