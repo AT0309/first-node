@@ -1,7 +1,7 @@
 'use strict'
-const number=process.argv[2] || 0;
-let sum=0;
+const number=process.argv[2] || 1;
+let sum=1;
 for(let i=1; i<=number; i++){
-    sum+=i;
+    sum*=i;
 }
 console.log(sum);
